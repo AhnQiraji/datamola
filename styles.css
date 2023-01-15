@@ -1,0 +1,322 @@
+:root {
+    --main-color: #eea710;
+    --background-color: #dddddd;
+    --home-color: #ffffff;
+}
+
+@font-face {
+    font-family: "OldNewspaper";
+    src: url("public/OldNewspaper.woff") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+* {
+    font-family: "OldNewspaper";
+}
+
+*::selection {
+    background-color: var(--main-color);
+    color: var(--home-color);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, p, hr, ul[class], l[class], li, figure, figcaption, blockquote, dl, dd {
+    margin: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+
+
+body {
+    height: 100vh;
+    width: 100vw;
+    padding: 5vh 5vw;
+    overflow: hidden;
+    /* background-color: var(--background-color); */
+    background-image: url(images/background-image.jpg);
+    background-size: cover;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+main {
+    position: relative;
+    height: 90vh;
+    width: 90vw;
+    box-shadow: 0 0 1.25rem black;
+}
+
+main > nav {
+    position: fixed;
+    top: 25vh;
+    left: 7vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 50vmin;
+    padding: 0 0.25rem;
+    border-radius: 1.5rem;
+    background-color: var(--main-color);
+    z-index: 1;
+}
+
+nav > div {
+    width: 2rem;
+    height: 2rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+nav > .home-link {
+    background-image: url(images/home-icon.png);
+}
+
+nav > .about-me-link {
+    background-image: url(images/about-me-icon.png);
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+nav > .resume-link {
+    background-image: url(images/resume-icon.png);
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+nav > .portfolio-link {
+    background-image: url(images/portfolio-icon.png);
+}
+
+nav > .contacts-link {
+    background-image: url(images/contacts-icon.png);
+}
+
+
+
+main > section:not(#home) {
+    position: absolute;
+    display: none;
+    height: 90vh;
+    width: 90vw;
+    padding: 5vh 5vw;
+    background-color: var(--background-color);
+}
+
+section#home {
+    display: flex;
+    justify-content: right;
+    background-color: var(--home-color);
+}
+
+#home > .greetings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.greetings h2 {
+    font-size: 2rem;
+} 
+
+.greetings h1 {
+    font-size: 4rem;
+} 
+
+.greetings h4 {
+    font-size: 1.25rem;
+    width: fit-content;
+    padding: 0 0.25rem;
+}
+
+.greetings p {
+    margin-top: 2rem;
+}
+
+
+#home > .portrait {
+    width: 45vw;
+    height: 90vh;
+    background-image: url(images/test-main-photo.png);
+    background-size: min(108vh, 54vw);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    filter: grayscale(0.9);
+    background-color: var(--background-color);
+}
+
+
+
+section#about-me {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section > h1 {
+    text-align: center;
+    font-size: 5rem;
+    border: 2px dotted black;
+}
+
+#about-me > h3 {
+    font-size: 1.5rem;
+}
+
+/* Картинки */
+
+
+
+section#resume {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#resume > h2 {
+    font-size: 1.25rem;
+}
+
+#resume > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2vw;
+}
+
+#resume > hr {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    border: none;
+}
+
+#resume > .expirience {
+    display: flex;
+    justify-content: space-between;
+}
+
+.expirience > div {
+    height: 10vmin;
+    width: 10vmin;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.css-logo {
+    background-image: url(images/css-logo.png);
+    width: 20vmin !important;
+}
+    
+.sass-logo {
+    background-image: url(images/sass-logo.png);
+}
+
+.git-logo {
+    background-image: url(images/git-logo.png);
+}
+
+.github-logo {
+    background-image: url(images/github-logo.png);  
+}
+
+
+
+section#portfolio {
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+
+section#contacts {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#contacts > h2 {
+    text-align: center;
+}
+
+#contacts > .classic, .links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.classic > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+    margin: 1vmin;
+}
+
+.phone-logo, .email-logo {
+    width: min(20vh, 20vw);
+    height: min(20vh, 20vw);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.phone-logo {
+    background-image: url(images/phone-logo.png);
+}
+
+.email-logo {
+    background-image: url(images/email-logo.png);
+}
+
+
+/* #contacts > .links {
+    justify-content: end; 
+    column-gap: min(2vh, 2vw);
+} */
+
+#contacts .logo {
+    width: 7vmin;
+    height: 7vmin;
+    margin: 0;
+    border-radius: 0.75rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.logo:hover {
+    scale: 1.5;
+}
+
+/* .github-logo {
+    background-size: contain;
+} */
+
+
+.main-color {
+    color: var(--main-color);
+}
+
+.bgmain-color {
+    background-color: var(--main-color);
+}
+
+.thin {
+    font-weight: 100;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+@media screen and (max-width: 1023px) {
+
+    html {
+        font-size: 12px;
+    }
+}
