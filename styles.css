@@ -76,27 +76,32 @@ nav > div {
     background-position: 50% 50%;
 }
 
-nav > .home-link {
+nav > div:hover {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+nav > #home-link {
     background-image: url(images/home-icon.png);
 }
 
-nav > .about-me-link {
+nav > #about-me-link {
     background-image: url(images/about-me-icon.png);
     width: 2.2rem;
     height: 2.2rem;
 }
 
-nav > .resume-link {
+nav > #resume-link {
     background-image: url(images/resume-icon.png);
     width: 2.4rem;
     height: 2.4rem;
 }
 
-nav > .portfolio-link {
+nav > #portfolio-link {
     background-image: url(images/portfolio-icon.png);
 }
 
-nav > .contacts-link {
+nav > #contacts-link {
     background-image: url(images/contacts-icon.png);
 }
 
@@ -106,7 +111,7 @@ main > section:not(#home) {
     position: absolute;
     display: none;
     height: 90vh;
-    /* width: 90vw; */
+    width: 90vw;
     padding: 5vh 5vw;
     background-color: var(--background-color);
 }
@@ -123,15 +128,15 @@ section#home {
     flex-direction: column;
     justify-content: center;
     width: 28rem;
-    margin-left: 5rem;
+    margin-left: 6rem;
     flex-shrink: 0;
 }
 
-.greetings h2 {
+.greetings h1 {
     font-size: 2rem;
 } 
 
-.greetings h1 {
+.greetings h2 {
     font-size: 4rem;
 } 
 
@@ -139,10 +144,6 @@ section#home {
     font-size: 1.25rem;
     width: fit-content;
     padding: 0 0.25rem;
-}
-
-.greetings p {
-    margin-top: 2rem;
 }
 
 
