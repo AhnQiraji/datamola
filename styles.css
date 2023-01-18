@@ -87,8 +87,6 @@ nav > #home-link {
 
 nav > #about-me-link {
     background-image: url(images/about-me-icon.png);
-    width: 2.2rem;
-    height: 2.2rem;
 }
 
 nav > #resume-link {
@@ -112,7 +110,7 @@ main > section:not(#home) {
     display: none;
     height: 90vh;
     width: 90vw;
-    padding: 5vh 5vw;
+    padding: 5vh 5vw 5vh calc(3rem + 4vw);
     background-color: var(--background-color);
 }
 
@@ -191,7 +189,7 @@ section#resume {
 
 #resume > div {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 2vw;
 }
 
@@ -203,8 +201,7 @@ section#resume {
 }
 
 #resume > .expirience {
-    display: flex;
-    justify-content: space-between;
+    grid-template-columns: repeat(8, 1fr);
 }
 
 .expirience > div {
@@ -213,6 +210,9 @@ section#resume {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    grid-column: span 2;
+    justify-self: center;
+    filter: drop-shadow(0 0 0.25rem black);
 }
 
 .css-logo {
@@ -224,12 +224,20 @@ section#resume {
     background-image: url(images/sass-logo.png);
 }
 
-.git-logo {
-    background-image: url(images/git-logo.png);
+.js-logo {
+    background-image: url(images/js-logo.png);
 }
 
-.github-logo {
-    background-image: url(images/github-logo.png);  
+#resume .git-logo {
+    background-image: url(images/git-logo.png);
+    grid-column: span 1;
+    justify-self: end;
+}
+
+#resume .github-logo {
+    background-image: url(images/github-logo.png); 
+    grid-column: span 1; 
+    justify-self: start;
 }
 
 
@@ -264,11 +272,15 @@ section#contacts {
 }
 
 .phone-logo, .email-logo {
-    width: min(20vh, 20vw);
-    height: min(20vh, 20vw);
+    width: 20vmin;
+    height: 20vmin;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.phone-logo, .email-logo:hover {
+    scale: 1.2;
 }
 
 .phone-logo {
@@ -279,11 +291,12 @@ section#contacts {
     background-image: url(images/email-logo.png);
 }
 
-
-/* #contacts > .links {
-    justify-content: end; 
-    column-gap: min(2vh, 2vw);
-} */
+#contacts footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 1.5rem;
+}
 
 #contacts .logo {
     width: 7vmin;
@@ -299,9 +312,10 @@ section#contacts {
     scale: 1.5;
 }
 
-/* .github-logo {
+.github-logo {
+    background-image: url(images/github-logo.png);
     background-size: contain;
-} */
+}
 
 
 .main-color {
