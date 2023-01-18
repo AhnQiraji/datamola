@@ -39,7 +39,6 @@ body {
     width: 100vw;
     padding: 5vh 5vw;
     overflow: hidden;
-    /* background-color: var(--background-color); */
     background-image: url(images/background-image.jpg);
     background-size: cover;
     text-rendering: optimizeSpeed;
@@ -51,6 +50,7 @@ main {
     height: 90vh;
     width: 90vw;
     box-shadow: 0 0 1.25rem black;
+    overflow: hidden;
 }
 
 main > nav {
@@ -106,7 +106,7 @@ main > section:not(#home) {
     position: absolute;
     display: none;
     height: 90vh;
-    width: 90vw;
+    /* width: 90vw; */
     padding: 5vh 5vw;
     background-color: var(--background-color);
 }
@@ -115,12 +115,16 @@ section#home {
     display: flex;
     justify-content: right;
     background-color: var(--home-color);
+    column-gap: 5vw;
 }
 
 #home > .greetings {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 28rem;
+    margin-left: 5rem;
+    flex-shrink: 0;
 }
 
 .greetings h2 {
@@ -143,14 +147,15 @@ section#home {
 
 
 #home > .portrait {
-    width: 45vw;
+    width: 40vw;
     height: 90vh;
-    background-image: url(images/test-main-photo.png);
-    background-size: min(108vh, 54vw);
+    background-image: url(images/test-main-photo1.png);
+    background-size: max(calc(90vh * 677/901), 40vw) max(90vh, calc(40vw * 901/677));
     background-repeat: no-repeat;
-    background-position: bottom right;
+    background-position: top left;
     filter: grayscale(0.9);
     background-color: var(--background-color);
+    /* flex-shrink: 0; */
 }
 
 
