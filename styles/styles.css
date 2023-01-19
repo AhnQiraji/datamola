@@ -194,11 +194,11 @@ section#resume {
     border: none;
 }
 
-#resume > .expirience {
+#resume > .logo-resume {
     grid-template-columns: repeat(8, 1fr);
 }
 
-.expirience > div {
+.logo-resume > div {
     height: 10vmin;
     width: 10vmin;
     background-size: contain;
@@ -356,12 +356,12 @@ section#contacts {
     text-align: center;
 }
 
-#contacts > .classic {
+#contacts > .communication {
     display: flex;
     justify-content: space-around;
 }
 
-.classic > div {
+.communication > div {
     display: flex;
     justify-content: center;
     align-items: center;
