@@ -1,0 +1,71 @@
+@media screen and (max-width: 1200px) {
+
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:992px) {
+
+    html {
+        font-size: 10px;
+    }
+
+    body {
+        padding: 10vh 10vw;
+    }
+
+    main {
+        height: 80vh;
+        width: 80vw;
+    }
+
+    main > nav {
+        left: 12vw;
+    }
+
+    main > section:not(#home) {
+        height: 80vh;
+        width: 80vw;
+    }
+
+    #home > .greetings {
+        width: 21rem;
+        margin-left: 6rem;
+    }
+    
+    .greetings h2 {
+        font-size: 3rem;
+    }
+
+    section > h1 {
+        font-size: 3rem;
+    }
+
+    .wrapper label {
+        width: 3rem;
+    }
+
+    .wrapper label:after {
+        top: -40%;
+        left: -10%;
+        height: 1.8rem;
+        width: 3.6rem;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    section > h1 {
+        font-size: 2rem;
+    }
+
+    #about-me > h3 {
+        font-size: 1.25rem;
+    }
+
+    #portfolio .wrapper {
+        height: 40vh;
+        width: 40vw;
+    }
+}
