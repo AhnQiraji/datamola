@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: "OldNewspaper";
-    src: url("fonts/OldNewspaper.woff") format("truetype");
+    src: url("../fonts/OldNewspaper.woff") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
