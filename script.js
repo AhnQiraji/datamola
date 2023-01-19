@@ -1,13 +1,18 @@
 let currentPage = localStorage.getItem('lastSessionPage');
 
-if (currentPage !== 'home' && currentPage !== null) {
-    document.getElementById(currentPage).style.display = 'flex';
-    document.getElementById(currentPage+'-link').style.filter = 'invert(1)';
-    document.getElementById('home').style.display = 'none';
-    document.getElementById('home-link').style.filter = '';
-} else {
-    currentPage = 'home';
-    document.getElementById('home-link').style.filter = 'invert(1)';
+switch (currentPage) {
+    case 'about-me':
+    case 'resume':
+    case 'portfolio':
+    case 'contacts':
+        document.getElementById(currentPage).style.display = 'flex';
+        document.getElementById(currentPage+'-link').style.filter = 'invert(1)';
+        document.getElementById('home').style.display = 'none';
+        document.getElementById('home-link').style.filter = '';
+        break;
+    default:
+        currentPage = 'home';
+        document.getElementById('home-link').style.filter = 'invert(1)';
 }
 
 function swipe(newPage) {
