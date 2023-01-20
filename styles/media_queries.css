@@ -69,11 +69,7 @@
 }
 
 @media (orientation: portrait) {
-
-    #home h2 {
-        background-color: blue !important;
-    }
-
+    
     * {
         min-width: initial !important;
         min-height: initial !important;
