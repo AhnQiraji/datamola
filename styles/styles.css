@@ -47,8 +47,8 @@ body {
 
 main {
     position: absolute;
-    height: 90vh;
-    width: 90vw;
+    height: 90vmin;
+    width: 90vmax;
     box-shadow: 0 0 1.25rem black;
     overflow: hidden;
     min-width: calc(480px * 0.8);
@@ -68,7 +68,7 @@ main > nav {
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    height: 50vh;
+    height: 50vmin;
     padding: 0 0.25rem;
     border-radius: 1.5rem;
     background-color: var(--main-color);
@@ -117,7 +117,7 @@ main > section:not(#home) {
     display: none;
     height: inherit;
     width: inherit;
-    padding: 5vh 5vw 5vh calc(2.9rem + 4vw);
+    padding: 5vmin 5vmax 5vmin calc(2.9rem + 4vmax);
     background-color: var(--background-color);
 }
 
@@ -125,7 +125,7 @@ section#home {
     display: flex;
     justify-content: right;
     background-color: var(--home-color);
-    column-gap: 5vw;
+    column-gap: 5vmax;
 }
 
 #home > .greetings {
@@ -133,7 +133,7 @@ section#home {
     flex-direction: column;
     justify-content: center;
     width: 28rem;
-    margin-left: calc(2.9rem + 4vw);
+    margin-left: calc(2.9rem + 4vmax);
     flex-shrink: 0;
 }
 
@@ -153,8 +153,8 @@ section#home {
 
 
 #home > .portrait {
-    height: 90vh;
-    width: 40vw;
+    height: 90vmin;
+    width: 40vmax;
     background-image: url(../images/portrait.png);
     background-size: max(calc(90vh * 677/901), 40vw) max(90vh, calc(40vw * 901/677), 250px);
     background-repeat: no-repeat;
@@ -195,7 +195,7 @@ section#resume {
 #resume > div {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 2vw;
+    column-gap: 2vmax;
 }
 
 #resume > hr {
@@ -259,8 +259,8 @@ section#portfolio {
 
 #portfolio .wrapper {
     position: relative;
-    height: 50vh;
-    width: 50vw;
+    height: 50vmin;
+    width: 50vmax;
 }
 
 #portfolio .slider{
