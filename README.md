@@ -1,6 +1,8 @@
 # datamola
 За основу взят следующий дизайн: https://weandthecolor.com/interactive-pdf-resume-template-adobe-indesign/144000
 
+Ссылка на деплой: https://ahnqiraji.github.io/datamola/
+
 Отказался от менюшки слева, чтобы не повторять nav, его пришлось перенести справа влево из-за разницы фотографий.
 
 В графе "резюме" значки подсвечены, чтобы не сливались с фоном.
