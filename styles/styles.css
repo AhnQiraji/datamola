@@ -34,20 +34,30 @@ html {
 body {
     height: 100vh;
     width: 100vw;
-    padding: 5vh 5vw;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-image: url(../images/background-image.jpg);
     background-size: cover;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    min-width: 480px;
+    min-height: 288px;
 }
 
 main {
-    position: relative;
+    position: absolute;
     height: 90vh;
     width: 90vw;
     box-shadow: 0 0 1.25rem black;
     overflow: hidden;
+    min-width: calc(480px * 0.8);
+    min-height: 250px;
+}
+
+main section {
+    min-width: calc(480px * 0.8);
+    min-height: 250px;
 }
 
 main > nav {
@@ -105,9 +115,9 @@ nav > #contacts-link {
 main > section:not(#home) {
     position: absolute;
     display: none;
-    height: 90vh;
-    width: 90vw;
-    padding: 5vh 5vw 5vh calc(3rem + 4vw);
+    height: inherit;
+    width: inherit;
+    padding: 5vh 5vw 5vh calc(2.9rem + 4vw);
     background-color: var(--background-color);
 }
 
@@ -123,7 +133,7 @@ section#home {
     flex-direction: column;
     justify-content: center;
     width: 28rem;
-    margin-left: 6rem;
+    margin-left: calc(2.9rem + 4vw);
     flex-shrink: 0;
 }
 
@@ -143,14 +153,15 @@ section#home {
 
 
 #home > .portrait {
-    width: 40vw;
     height: 90vh;
+    width: 40vw;
     background-image: url(../images/portrait.png);
-    background-size: max(calc(90vh * 677/901), 40vw) max(90vh, calc(40vw * 901/677));
+    background-size: max(calc(90vh * 677/901), 40vw) max(90vh, calc(40vw * 901/677), 250px);
     background-repeat: no-repeat;
     background-position: top left;
     filter: grayscale(0.9);
     background-color: var(--background-color);
+    min-height: 250px;
 }
 
 
